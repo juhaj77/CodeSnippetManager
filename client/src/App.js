@@ -14,11 +14,10 @@ const App = () => {
   const [codes, setCodes] = useState([])
  
   useEffect(() => {
-    let userlist = null
     const get = async () => {
       if(user) {
-        userlist = await getUsers(user)
-        if(userlist) setUsers(userlist.data.users)
+        const userlist = await getUsers(user)
+        setUsers(userlist.data.users)
       }
     }
    get()
