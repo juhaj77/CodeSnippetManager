@@ -148,7 +148,7 @@ const App = () => {
           <button style={{float:'right'}} onClick={() => addCode()}>save</button>
         </div>
       </div>
-      {codes && codes.map(c => <div key={c.id}>
+      {codes && codes.map(c => <div style={{marginTop:'.2em'}} key={c.id}>
         <button onClick={() => removeCode(c)}>del</button>
         {c.collapsed ? <button onClick={() => setCollapsed(false,c)}>expand</button> :
         <button onClick={() => setCollapsed(true,c)}>collapse</button>}
