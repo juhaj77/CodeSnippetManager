@@ -41,14 +41,11 @@ const App = () => {
     try {
       const codeList = await axios.get(`/api/codes/${user.userId}`, 
       { headers: {Authorization: user.token}})
-      let codeList2 = null
-      if(users) codeList2 = await codeList.data.codes.map((c) => {
+      const codeList2 = await codeList.data.codes.map((c) => {
         if(c.owner !== user.userId) return {...c, sharedBy: users.find(u => u.id === c.owner).username }
         else {return c}
       })
-     
-      if(codeList2) setCodes(codeList2)
-      else {setCodes(codeList.data.codes)}
+      setCodes(codeList2)
     } catch (e) {
       console.log(e)
     }
@@ -68,7 +65,6 @@ const App = () => {
     getCodes(user)
     setCode('')
     name.reset()
-    console.log(codes)
   }
 
   const removeCode = async c => {
