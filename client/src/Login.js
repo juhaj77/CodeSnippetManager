@@ -67,7 +67,11 @@ const Login = (props) => {
         <h1>
             Login
         </h1> 
-        <div style={{border:'1px solid black',padding:'1em',width:'fit-content',display:'inline-block'}}>
+        <div style={{
+            border:'1px solid black',
+            padding:'1em',
+            width:'fit-content',
+            display:'inline-block'}}>
           <div>username&#160;&#160;
             <input {...username.input} />
           </div>
@@ -82,7 +86,11 @@ const Login = (props) => {
         <h1>
             Sign Up
         </h1>
-        <div style={{border:'1px solid black',padding:'1em',width:'fit-content',display:'inline-block'}}>
+        <div style={{
+            border:'1px solid black',
+            padding:'1em',
+            width:'fit-content',
+            display:'inline-block'}}>
           <div>username&#160;&#160;
             <input {...username.input} />
           </div>
@@ -93,7 +101,10 @@ const Login = (props) => {
           <button onClick={() => toggle(style)}>cancel</button>
         </div>
       </div>
-      { error && <div style={{fontSize:'1.5em', color:'red', fontWeight:'900'}}>{error}</div> }
+      { error && <div style={{
+        fontSize:'1.5em',
+        color:'red',
+        fontWeight:'900'}}>{error}</div> }
     </div>
 }
 
