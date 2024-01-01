@@ -49,7 +49,7 @@ const App = () => {
       console.log(e)
     }
   }
-  const addCode = async (code) => {
+  const addCode = async () => {
     const date = new Date()
     try {
       await axios.post('/api/codes/add', 
@@ -145,7 +145,7 @@ const App = () => {
                 fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
               }}
           />
-          <button style={{float:'right'}} onClick={() => addCode(code)}>save</button>
+          <button style={{float:'right'}} onClick={() => addCode()}>save</button>
         </div>
       </div>
       {codes && codes.map(c => <div key={c.id}>
