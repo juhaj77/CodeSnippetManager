@@ -1,0 +1,2 @@
+# CodeSnippetManager
+code snippet manager
